@@ -2,7 +2,7 @@
 //  FavouriteBottomVCTableViewCell.swift
 //  BananaBike
 //
-//  Created by Mandeep on 1/24/17.
+//  Created by Saroj on 1/24/17.
 //  Copyright © 2017 Saroj. All rights reserved.
 //
 
