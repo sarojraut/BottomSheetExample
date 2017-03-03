@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Location-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SelectLocation" customModule="BottomSheetExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N4W-X2-2Qn">
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Wiv-5n-9JQ"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N4W-X2-2Qn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0WA-p2-Sbq"/>
+                            <constraint firstAttribute="trailing" secondItem="N4W-X2-2Qn" secondAttribute="trailing" id="6RH-9a-W7s"/>
+                            <constraint firstItem="N4W-X2-2Qn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B4Z-Lz-E3p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N4W-X2-2Qn" secondAttribute="bottom" id="cRp-zt-UG6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="N4W-X2-2Qn" id="Er4-8q-Sf2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="-107.49625187406298"/>
+        </scene>
+        <!--Bottom LocationVC View Controller-->
+        <scene sceneID="CZ9-bL-qIW">
+            <objects>
+                <viewController storyboardIdentifier="frequentBottomVC" id="GOx-a6-yKh" customClass="BottomLocationVCViewController" customModule="BottomSheetExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m9h-Np-6u2"/>
+                        <viewControllerLayoutGuide type="bottom" id="dw8-I3-Mef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wNy-vG-6Za">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rIk-pg-3Rk">
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" rowHeight="79" id="pnp-iu-IfI" customClass="FavouriteBottomVCTableViewCell" customModule="BottomSheetExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="375" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pnp-iu-IfI" id="lWE-jd-3Be">
+                                            <frame key="frameInset" width="375" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kathmandu,Bagmati,Nepal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-9q-HWG">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="178" id="178-uC-nju"/>
+                                                        <constraint firstAttribute="height" constant="22" id="6ae-ME-K4T"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.98928624391555786" green="0.29630255699157715" blue="0.040206305682659149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="178-uC-nju"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kathmandu is beautiful city located in nepal." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-Dw-w5I">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="178" id="yjd-hg-cji"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.98928624391555786" green="0.29630255699157715" blue="0.040206305682659149" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="yjd-hg-cji"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSU-qT-iaE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="43" id="Xxe-Fe-SCo"/>
+                                                        <constraint firstAttribute="height" constant="41" id="s1i-gd-b9a"/>
+                                                    </constraints>
+                                                    <state key="normal" image="StarFull">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oSU-qT-iaE" firstAttribute="leading" secondItem="Y5m-9q-HWG" secondAttribute="trailing" constant="26" id="32w-oq-3U4"/>
+                                                <constraint firstItem="oSU-qT-iaE" firstAttribute="top" secondItem="lWE-jd-3Be" secondAttribute="topMargin" constant="7" id="4H6-o2-6Bq"/>
+                                                <constraint firstItem="ep1-Dw-w5I" firstAttribute="top" secondItem="Y5m-9q-HWG" secondAttribute="bottom" id="Ndp-Fp-tJg"/>
+                                                <constraint firstItem="Y5m-9q-HWG" firstAttribute="top" secondItem="lWE-jd-3Be" secondAttribute="topMargin" constant="4" id="fto-k4-xik"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oSU-qT-iaE" secondAttribute="trailing" constant="7" id="iZC-ey-MBJ"/>
+                                                <constraint firstItem="ep1-Dw-w5I" firstAttribute="leading" secondItem="Y5m-9q-HWG" secondAttribute="leading" constant="20" id="jJP-uY-mLM"/>
+                                                <constraint firstItem="oSU-qT-iaE" firstAttribute="leading" secondItem="ep1-Dw-w5I" secondAttribute="trailing" constant="26" id="rSZ-oJ-yff"/>
+                                                <constraint firstItem="Y5m-9q-HWG" firstAttribute="leading" secondItem="lWE-jd-3Be" secondAttribute="leadingMargin" constant="20" id="wrO-Qa-pFQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLbl" destination="Y5m-9q-HWG" id="4g2-Hp-woH"/>
+                                            <outlet property="favoriteBtn" destination="oSU-qT-iaE" id="zsF-su-HYb"/>
+                                            <outlet property="placeLbl" destination="ep1-Dw-w5I" id="ySU-iE-3u9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="GOx-a6-yKh" id="1xZ-ul-C79"/>
+                                    <outlet property="delegate" destination="GOx-a6-yKh" id="Z0b-oU-jMu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dw8-I3-Mef" firstAttribute="top" secondItem="rIk-pg-3Rk" secondAttribute="bottom" constant="150" id="3LW-h6-nAD"/>
+                            <constraint firstItem="rIk-pg-3Rk" firstAttribute="leading" secondItem="wNy-vG-6Za" secondAttribute="leading" id="Dq8-Hm-bf1"/>
+                            <constraint firstItem="rIk-pg-3Rk" firstAttribute="top" secondItem="wNy-vG-6Za" secondAttribute="top" id="Iju-Fc-Cam"/>
+                            <constraint firstAttribute="trailing" secondItem="rIk-pg-3Rk" secondAttribute="trailing" id="Z6Y-nf-dcx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewBottomConstraint" destination="3LW-h6-nAD" id="l2o-Dm-yyw"/>
+                        <outlet property="tblView" destination="rIk-pg-3Rk" id="ZbH-mg-hpe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2s-wF-XSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="-112.89355322338831"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="StarFull" width="43" height="41"/>
+    </resources>
+</document>
